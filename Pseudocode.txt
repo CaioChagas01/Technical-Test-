@@ -1,0 +1,17 @@
+Função getSubSets(conjunto A)
+    Início
+        Converter A em uma lista chamada lista
+        Definir n como o tamanho da lista
+        Criar um conjunto vazio chamado resultado
+
+        Para i de 0 até (2^n - 1) faça:
+            Criar subconjunto vazio
+
+            Para j de 0 até (n - 1) faça:
+                Se o bit j de i estiver ativado (ou seja, (i >> j) & 1 for verdadeiro)
+                    Adicionar lista[j] ao subconjunto
+
+            Adicionar o subconjunto como um conjunto imutável (frozenset) ao resultado
+
+        Retornar resultado
+    Fim
